@@ -1,2 +1,5 @@
 @nestjs/typeorm typeorm mysql2
 @nestjs/config
+bcrypt
+-D @types/bcrypt
+npm install --save @nestjs/jwt

@@ -1,20 +1,20 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
+@Entity('products')
 export class Product {
-	@PrimaryGeneratedColumn()
-	id: number;
+  @PrimaryGeneratedColumn()
+  id: number;
 
-	@Column({ nullable: false })
-	name: string;
+  @Column({ nullable: false })
+  name: string;
 
-	@Column({ nullable: true })
-	description: string;
+  @Column({ nullable: true })
+  description: string;
 
-	@Column({ nullable: false })
-	price: number;
+  @Column({ nullable: false })
+  price: number;
 
-	constructor(partial: Partial<Product>) {
-		Object.assign(this, partial);
-	}
+  constructor(partial: Partial<Product>) {
+    Object.assign(this, partial);
+  }
 }
