@@ -1,0 +1,2 @@
+@nestjs/typeorm typeorm mysql2
+@nestjs/config
