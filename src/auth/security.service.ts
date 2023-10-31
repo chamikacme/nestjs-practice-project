@@ -2,10 +2,14 @@ import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { compare, hash } from 'bcrypt';
 import { User } from '../user/entities/user.entity';
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class SecurityService {
-  constructor(private jwtService: JwtService) {}
+  constructor(
+    private jwtService: JwtService,
+    private configService: ConfigService,
+  ) {}
 
   async hashPassword(password: string) {
     return await hash(password, 10);
@@ -16,10 +20,10 @@ export class SecurityService {
   }
 
   async generateJwt(user: User) {
-    const payload = { email: user.email, sub: user.id };
+    const payload = { sub: user.id };
     return await this.jwtService.signAsync(payload, {
       expiresIn: '1d',
-      secret: process.env.JWT_SECRET,
+      secret: this.configService.get('JWT_SECRET'),
     });
   }
 }

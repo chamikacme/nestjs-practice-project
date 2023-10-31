@@ -3,3 +3,6 @@
 bcrypt
 -D @types/bcrypt
 npm install --save @nestjs/jwt
+npm install --save @nestjs/passport passport
+npm install passport-jwt
+npm install --save-dev @types/passport-jwt
