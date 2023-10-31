@@ -1,8 +1,9 @@
-@nestjs/typeorm typeorm mysql2
-@nestjs/config
-bcrypt
--D @types/bcrypt
+npm install @nestjs/typeorm typeorm mysql2
+npm install @nestjs/config
+npm install bcrypt
+npm install -D @types/bcrypt
 npm install --save @nestjs/jwt
 npm install --save @nestjs/passport passport
 npm install passport-jwt
 npm install --save-dev @types/passport-jwt
+npm install --save class-validator class-transformer
