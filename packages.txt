@@ -7,3 +7,4 @@ npm install --save @nestjs/passport passport
 npm install passport-jwt
 npm install --save-dev @types/passport-jwt
 npm install --save class-validator class-transformer
+npm install --save @nestjs/swagger
